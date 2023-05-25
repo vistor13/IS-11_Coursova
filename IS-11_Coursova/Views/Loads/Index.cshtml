@@ -1,0 +1,53 @@
+﻿@model IEnumerable<IS_11_Coursova.Models.Load>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Loads</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Teacher.Full_Name)
+        </th>
+        <th>
+            DisciplineName
+        </th>
+
+        <th>
+            TypeLoadName
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hours)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Teacher.Full_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Discipline.Name)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.TypeLoad.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hours)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.LoadID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.LoadID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.LoadID })
+        </td>
+    </tr>
+}
+
+</table>

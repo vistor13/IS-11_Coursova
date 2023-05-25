@@ -1,0 +1,50 @@
+﻿@model IS_11_Coursova.Models.Load
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Load</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Hours)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hours)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Discipline.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Discipline.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Teacher.Full_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Teacher.Full_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TypeLoad.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TypeLoad.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.LoadID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
